@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$family: "SF Pro Display", sans-serif;
+$size: 20px;
+
+@mixin font {
+  font-family: $family;
+  font-size: $size;
+  line-height: normal;
+}
+
+@mixin screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+} 
+
+$blue: #0381ff;
+$black: #000000;
+$white: #ffffff;
+$darkblue: #0b172a;
