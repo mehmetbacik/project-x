@@ -29,13 +29,70 @@ $size: 20px;
 }
 
 @mixin screen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
-} 
+}
 
 $blue: #0381ff;
+$lightblue: #f1f8ffe3;
 $black: #000000;
 $white: #ffffff;
 $darkblue: #0b172a;
+$darkgray: #f5f5f7;
+$gray: #fbfcfc;
+$border: #cccccc;
+
+@media screen and (min-width: 1200px) {
+  br {
+    &.large {
+      display: block;
+    }
+    &.medium {
+      display: none;
+    }
+    &.small {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  br {
+    &.large {
+      display: block;
+    }
+    &.medium {
+      display: none;
+    }
+    &.small {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  br {
+    &.large {
+      display: none;
+    }
+    &.medium {
+      display: block;
+    }
+    &.small {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  br {
+    &.large {
+      display: none;
+    }
+    &.medium {
+      display: none;
+    }
+    &.small {
+      display: block;
+    }
+  }
+}

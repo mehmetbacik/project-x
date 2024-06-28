@@ -28,7 +28,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="main-content">
-      <div className="tab-content">{renderTabContent()}</div>
+      <div className="tab">{renderTabContent()}</div>
       <TabNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
     </div>
   );

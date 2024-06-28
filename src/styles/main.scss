@@ -3,32 +3,96 @@
 body {
   @include font;
   @include screen;
+  background-color: $darkgray;
+  display: flex;
+  align-items: center;
   .App {
     .main-content {
       .tab-navigation {
         display: flex;
         align-items: center;
+        justify-content: center;
+        background-color: $white;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 2px transparent;
+          border-right-color: $darkgray;
+          &.active {
+            background-color: $lightblue;
+          }
+          &:hover {
+            border-color: $blue;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 40px 25px;
+            font-weight: 600;
+            .icon-area {
+              background-color: $white;
+              border: solid 1px $border;
+              border-radius: 50%;
+              padding: 10px;
+            }
+          }
+          &:first-child {
+            border-left-color: $darkgray;
+            &:hover {
+              border-left-color: $blue;
+            }
+          }
+        }
       }
-      .tab-content {
-        .document-scanner {
+      .tab {
+        background-color: $gray;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 120px;
+        padding-left: 40px;
+        padding-right: 40px;
+        .content {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .image {
+            padding: 0px 100px;
+          }
+          .headline {
+            padding: 0px 50px;
             display: flex;
-            align-items: center;
-        }
-        .sign-stamp {
-            display: flex;
-            align-items: center;
-        }
-        .batch-scanning {
-            display: flex;
-            align-items: center;
-        }
-        .advanced-filters {
-            display: flex;
-            align-items: center;
-        }
-        .export-share {
-            display: flex;
-            align-items: center;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 15px;
+            h2 {
+              font-weight: 800;
+              font-size: 16px;
+              text-transform: uppercase;
+              color: $blue;
+              letter-spacing: 1px;
+            }
+            h1 {
+              font-weight: 700;
+              font-size: 32px;
+              color: $darkblue;
+            }
+            p {
+              text-align: right;
+              line-height: 1.5;
+            }
+            button {
+              border: solid 1px $border;
+              padding: 10px;
+              border-radius: 5px;
+              font-weight: 400;
+              &:hover {
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+              }
+            }
+          }
         }
       }
     }

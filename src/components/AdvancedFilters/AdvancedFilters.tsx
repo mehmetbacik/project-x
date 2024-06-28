@@ -7,7 +7,7 @@ import Right from "../../assets/images/desktop/advanced-filters-right.png";
 
 const AdvancedFilters: React.FC = () => {
   return (
-    <div className="advanced-filters">
+    <div className="advanced-filters content">
       <div
         className="image"
         style={{ position: "relative", overflow: "hidden" }}
@@ -15,20 +15,20 @@ const AdvancedFilters: React.FC = () => {
         <motion.img
           src={Phone}
           alt="Phone"
-          initial={{ y: 550 }}
-          animate={{ y: 0 }}
-          transition={{ delay: 0.3, duration: 1.2 }}
+          initial={{ opacity: 0, y: 500 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1.5 }}
         />
         <motion.img
           src={Left}
           alt="LeftImage"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.5 }}
+          transition={{ delay: 1.8, duration: 0.8 }}
           style={{
             position: "absolute",
-            top: "50%",
-            left: "10%",
+            top: "60%",
+            left: "15%",
             transform: "translate(-50%, -50%)",
           }}
         />
@@ -37,11 +37,11 @@ const AdvancedFilters: React.FC = () => {
           alt="RightImage"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 0.5 }}
+          transition={{ delay: 2, duration: 0.8 }}
           style={{
             position: "absolute",
-            top: "50%",
-            right: "10%",
+            top: "60%",
+            right: "15%",
             transform: "translate(50%, -50%)",
           }}
         />
@@ -55,9 +55,11 @@ const AdvancedFilters: React.FC = () => {
         <h2>Advanced Filters</h2>
         <h1>Unique Filters</h1>
         <p>
-          Apply advanced filters and enhance quality with various custom made
-          filters. Manually edit brightness and contrast by your own choice on
-          the custom filters.
+          Apply advanced filters and enhance quality with various{" "}
+          <br className="large" />
+          custom made filters. Manually edit brightness and contrast by{" "}
+          <br className="large" />
+          your own choice on the custom filters.
         </p>
         <button>Learn More</button>
       </motion.div>
