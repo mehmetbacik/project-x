@@ -19,8 +19,8 @@ const TabItem: React.FC<TabItemProps> = ({
   setActiveTab,
 }) => {
   const circleVariants = {
-    InActiveCircle: { pathLength: 0, rotate: 0 },
-    ActiveCircle: { pathLength: 1, rotate: 360 },
+    InActiveCircle: { pathLength: 0, rotate: 270 },
+    ActiveCircle: { pathLength: 1, rotate: -90 },
   };
 
   return (
