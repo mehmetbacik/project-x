@@ -13,14 +13,15 @@ body {
         align-items: center;
         justify-content: center;
         background-color: $white;
-        li {
+        .item {
           display: flex;
           align-items: center;
           justify-content: center;
-          border: solid 2px transparent;
+          border: solid 2px $white;
           border-right-color: $darkgray;
           &.active {
             background-color: $lightblue;
+            border-color: $lightblue;
           }
           &:hover {
             border-color: $blue;
@@ -28,9 +29,11 @@ body {
           button {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 20px;
             padding: 40px 25px;
             font-weight: 600;
+            width: 100%;
             .icon-area {
               background-color: $white;
               border: solid 1px $border;
@@ -91,6 +94,148 @@ body {
               &:hover {
                 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  body {
+    @include mobile-font;
+    background-color: $gray;
+    .App {
+      .main-content {
+        .tab {
+          .content {
+            .image {
+              padding: 0px 65px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    @include mobile-font;
+    background-color: $gray;
+    .App {
+      .main-content {
+        .tab-navigation {
+          .item {
+            button {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    @include mobile-font;
+    background-color: $gray;
+    .App {
+      .main-content {
+        .tab-navigation {
+          .item {
+            button {
+              padding: 20px 15px;
+            }
+          }
+        }
+        .tab {
+          padding-top: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          .content {
+            flex-direction: column-reverse;
+            gap: 20px;
+            .image {
+              padding: 0px 65px;
+            }
+            .headline {
+              padding: 0px;
+              align-items: center;
+              h2 {
+                text-align: center;
+              }
+              h1 {
+                text-align: center;
+              }
+              p {
+                text-align: center;
+                line-height: 1.8;
+                min-height: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    @include mobile-font;
+    background-color: $gray;
+    .App {
+      .main-content {
+        .tab-navigation {
+          .item {
+            button {
+              padding: 20px 15px;
+            }
+          }
+        }
+        .tab {
+          padding-top: 25px;
+          padding-left: 15px;
+          padding-right: 15px;
+          .content {
+            flex-direction: column-reverse;
+            gap: 40px;
+            .image {
+              padding: 0px 65px;
+            }
+            .headline {
+              padding: 0px;
+              align-items: center;
+              h2 {
+                text-align: center;
+              }
+              h1 {
+                text-align: center;
+              }
+              p {
+                text-align: center;
+                line-height: 1.8;
+                min-height: 76px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    .App {
+      .main-content {
+        .tab {
+          .content {
+            .image {
+              padding: 0px 35px;
             }
           }
         }

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 import DocumentScannerActiveIcon from "../../assets/icons/document-scanner-icon-active.svg";
 import DocumentScannerIcon from "../../assets/icons/document-scanner-icon.svg";
 import SignAndStampActiveIcon from "../../assets/icons/sign-stamp-icon-active.svg";
@@ -59,59 +61,78 @@ const TabNavigation: React.FC<TabNavigationProps> = ({
   };
 
   return (
-    <ul className="tab-navigation">
+    <Swiper
+      slidesPerView={1.5}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+        1400: {
+          slidesPerView: 5,
+        },
+      }}
+      navigation
+      className="tab-navigation"
+    >
       {tabs.map((tab) => (
-        <li
-          key={tab.id}
-          className={activeTab === tab.id ? "active" : ""}
-          id={tab.id}
-        >
-          <button onClick={() => setActiveTab(tab.id)}>
-            <div className="icon-area" style={{ position: "relative" }}>
-              <motion.img
-                src={activeTab === tab.id ? tab.activeIcon : tab.inactiveIcon}
-                alt={
-                  activeTab === tab.id
-                    ? `${tab.label} Active`
-                    : `${tab.label} Inactive`
-                }
-                whileHover={{ scale: 1.1 }}
-              />
-              {activeTab === tab.id && (
-                <motion.svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 54 54"
-                  style={{
-                    position: "absolute",
-                    top: "-2px",
-                    left: "-2px",
-                  }}
-                  initial="InActiveCircle"
-                  animate="ActiveCircle"
-                >
-                  <motion.circle
-                    cx="25"
-                    cy="25"
-                    r="23"
-                    stroke="#0381ff"
-                    strokeWidth="1"
-                    fill="none"
-                    variants={circleVariants}
-                    transition={{
-                      duration: 1,
-                      ease: "easeInOut",
+        <SwiperSlide key={tab.id}>
+          <div
+            className={`item ${activeTab === tab.id ? "active" : ""}`}
+            id={tab.id}
+          >
+            <button onClick={() => setActiveTab(tab.id)}>
+              <div className="icon-area" style={{ position: "relative" }}>
+                <motion.img
+                  src={activeTab === tab.id ? tab.activeIcon : tab.inactiveIcon}
+                  alt={
+                    activeTab === tab.id
+                      ? `${tab.label} Active`
+                      : `${tab.label} Inactive`
+                  }
+                  whileHover={{ scale: 1.1 }}
+                />
+                {activeTab === tab.id && (
+                  <motion.svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 54 54"
+                    style={{
+                      position: "absolute",
+                      top: "-2px",
+                      left: "-2px",
                     }}
-                    style={{ transformOrigin: "center" }}
-                  />
-                </motion.svg>
-              )}
-            </div>
-            {tab.label}
-          </button>
-        </li>
+                    initial="InActiveCircle"
+                    animate="ActiveCircle"
+                  >
+                    <motion.circle
+                      cx="25"
+                      cy="25"
+                      r="23"
+                      stroke="#0381ff"
+                      strokeWidth="1"
+                      fill="none"
+                      variants={circleVariants}
+                      transition={{
+                        duration: 1,
+                        ease: "easeInOut",
+                      }}
+                      style={{ transformOrigin: "center" }}
+                    />
+                  </motion.svg>
+                )}
+              </div>
+              {tab.label}
+            </button>
+          </div>
+        </SwiperSlide>
       ))}
-    </ul>
+    </Swiper>
   );
 };
 

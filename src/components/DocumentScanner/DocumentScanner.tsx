@@ -27,8 +27,8 @@ const DocumentScanner: React.FC = () => {
         <h1>Scan with Ease</h1>
         <p>
           Scan any document instantly with your mobile device by just{" "}
-          <br className="large" />a few steps. Save as PDF,JPG,ZIP,TXT and Word
-          format.
+          <br className="large" />a few steps. <br className="medium" />
+          Save as PDF,JPG,ZIP,TXT and Word format.
         </p>
         <button>Learn More</button>
       </motion.div>

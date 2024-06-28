@@ -5,6 +5,9 @@ import Arrow from "../../assets/images/desktop/export-share-arrow.png";
 import JPG from "../../assets/images/desktop/export-share-jpg.png";
 import PDF from "../../assets/images/desktop/export-share-pdf.png";
 import TXT from "../../assets/images/desktop/export-share-txt.png";
+import JPGMobile from "../../assets/images/mobile/export-share-jpg.png";
+import PDFMobile from "../../assets/images/mobile/export-share-pdf.png";
+import TXTMobile from "../../assets/images/mobile/export-share-txt.png";
 
 const ExportAndShare: React.FC = () => {
   return (
@@ -45,6 +48,7 @@ const ExportAndShare: React.FC = () => {
             top: "60%",
             transform: "translate(-50%, -50%)",
           }}
+          className="hidden sm:block"
         />
         <motion.img
           src={JPG}
@@ -58,6 +62,7 @@ const ExportAndShare: React.FC = () => {
             top: "57%",
             transform: "translate(-50%, -50%)",
           }}
+          className="hidden sm:block"
         />
         <motion.img
           src={TXT}
@@ -71,6 +76,49 @@ const ExportAndShare: React.FC = () => {
             top: "60%",
             transform: "translate(-50%, -50%)",
           }}
+          className="hidden sm:block"
+        />
+        <motion.img
+          src={PDFMobile}
+          alt="PDF"
+          initial={{ opacity: 0, y: 100, x: -50 }}
+          animate={{ opacity: 1, y: 0, x: -100 }}
+          transition={{ delay: 2.2, duration: 0.5 }}
+          style={{
+            position: "absolute",
+            left: "40%",
+            top: "56%",
+            transform: "translate(-50%, -50%)",
+          }}
+          className="block sm:hidden"
+        />
+        <motion.img
+          src={JPGMobile}
+          alt="JPG"
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.5, duration: 0.5 }}
+          style={{
+            position: "absolute",
+            left: "37%",
+            top: "53%",
+            transform: "translate(-50%, -50%)",
+          }}
+          className="block sm:hidden"
+        />
+        <motion.img
+          src={TXTMobile}
+          alt="TXT"
+          initial={{ opacity: 0, y: 100, x: 50 }}
+          animate={{ opacity: 1, y: 0, x: 100 }}
+          transition={{ delay: 2.8, duration: 1 }}
+          style={{
+            position: "absolute",
+            right: "40%",
+            top: "56%",
+            transform: "translate(-50%, -50%)",
+          }}
+          className="block sm:hidden"
         />
       </div>
       <motion.div

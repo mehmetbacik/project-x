@@ -21,10 +21,17 @@
 
 $family: "SF Pro Display", sans-serif;
 $size: 20px;
+$mobilesize: 14px;
 
 @mixin font {
   font-family: $family;
   font-size: $size;
+  line-height: normal;
+}
+
+@mixin mobile-font {
+  font-family: $family;
+  font-size: $mobilesize;
   line-height: normal;
 }
 
@@ -55,7 +62,7 @@ $border: #cccccc;
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
   br {
     &.large {
       display: block;
@@ -69,7 +76,7 @@ $border: #cccccc;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   br {
     &.large {
       display: none;

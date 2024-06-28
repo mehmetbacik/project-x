@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Phone from "../../assets/images/desktop/batch-scanning-phone.png";
 import File from "../../assets/images/desktop/batch-scanning-file.png";
+import FileMobile from "../../assets/images/mobile/batch-scanning-file.png";
 
 const BatchScanning: React.FC = () => {
   return (
@@ -37,6 +38,7 @@ const BatchScanning: React.FC = () => {
             animate={{ y: -40, opacity: 1, scale: 0.8 }}
             transition={{ delay: 1.6, duration: 0.8 }}
             style={{ position: "absolute" }}
+            className="hidden sm:block"
           />
           <motion.img
             src={File}
@@ -45,6 +47,7 @@ const BatchScanning: React.FC = () => {
             animate={{ y: -10, opacity: 1, scale: 0.9 }}
             transition={{ delay: 2, duration: 0.8 }}
             style={{ position: "absolute" }}
+            className="hidden sm:block"
           />
           <motion.img
             src={File}
@@ -53,6 +56,34 @@ const BatchScanning: React.FC = () => {
             animate={{ y: 20, opacity: 1, scale: 1 }}
             transition={{ delay: 2.4, duration: 0.8 }}
             style={{ position: "absolute" }}
+            className="hidden sm:block"
+          />
+          <motion.img
+            src={FileMobile}
+            alt="FileOne"
+            initial={{ y: 140, opacity: 0, scale: 0.9 }}
+            animate={{ y: -30, opacity: 1, scale: 0.9 }}
+            transition={{ delay: 1.6, duration: 0.8 }}
+            style={{ position: "absolute" }}
+            className="block sm:hidden"
+          />
+          <motion.img
+            src={FileMobile}
+            alt="FileTwo"
+            initial={{ y: 120, opacity: 0, scale: 1 }}
+            animate={{ y: -10, opacity: 1, scale: 1 }}
+            transition={{ delay: 2, duration: 0.8 }}
+            style={{ position: "absolute" }}
+            className="block sm:hidden"
+          />
+          <motion.img
+            src={FileMobile}
+            alt="FileThree"
+            initial={{ y: 100, opacity: 0, scale: 1.1 }}
+            animate={{ y: 10, opacity: 1, scale: 1.1 }}
+            transition={{ delay: 2.4, duration: 0.8 }}
+            style={{ position: "absolute" }}
+            className="block sm:hidden"
           />
         </motion.div>
       </div>
@@ -67,7 +98,8 @@ const BatchScanning: React.FC = () => {
         <p>
           Scan multiple pages or documents in multiple-scanning{" "}
           <br className="large" />
-          mode. Batch all scans as a single document.
+          mode. <br className="medium" />
+          Batch all scans as a single document.
         </p>
         <button>Learn More</button>
       </motion.div>
