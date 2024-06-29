@@ -121,25 +121,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  body {
-    @include mobile-font;
-    background-color: $gray;
-    .App {
-      .main-content {
-        .tab-navigation {
-          .item {
-            button {
-              font-size: 18px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1069px) {
   body {
     @include mobile-font;
     background-color: $gray;
@@ -184,6 +166,25 @@ body {
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+  body {
+    @include mobile-font;
+    background-color: $gray;
+    .App {
+      .main-content {
+        .tab-navigation {
+          .item {
+            button {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 425px) {
   body {
     @include mobile-font;
@@ -194,6 +195,7 @@ body {
           .item {
             button {
               padding: 20px 15px;
+              font-size: 16px;
             }
           }
         }
