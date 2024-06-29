@@ -54,7 +54,7 @@ const TabItem: React.FC<TabItemProps> = ({
                 fill="none"
                 variants={circleVariants}
                 transition={{
-                  duration: 1,
+                  duration: 0.8,
                   ease: "easeInOut",
                 }}
                 style={{ transformOrigin: "center" }}

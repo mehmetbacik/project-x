@@ -57,6 +57,7 @@ body {
         padding-top: 120px;
         padding-left: 40px;
         padding-right: 40px;
+        min-height: 603px;
         .content {
           display: flex;
           align-items: center;
@@ -228,6 +229,30 @@ body {
   }
 }
 
+@media screen and (max-width: 375px) {
+  body {
+    .App {
+      .main-content {
+        .tab-navigation {
+          .item {
+            button {
+              padding: 15px 10px;
+              font-size: 14px;
+            }
+          }
+        }
+        .tab {
+          .content {
+            .image {
+              padding: 0px 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 320px) {
   body {
     .App {
@@ -235,7 +260,7 @@ body {
         .tab {
           .content {
             .image {
-              padding: 0px 35px;
+              padding: 0px 15px;
             }
           }
         }
