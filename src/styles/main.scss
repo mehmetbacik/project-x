@@ -229,6 +229,22 @@ body {
   }
 }
 
+@media screen and (min-width: 376px) and (max-width:424px) {
+  body {
+    .App {
+      .main-content {
+        .tab {
+          .content {
+            .image {
+              padding: 0px 35px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 375px) {
   body {
     .App {

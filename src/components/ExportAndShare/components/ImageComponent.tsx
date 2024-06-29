@@ -107,7 +107,7 @@ const ImageComponent: React.FC = () => {
         alt="TXT"
         initial={{ opacity: 0, y: 100, x: 50 }}
         animate={{ opacity: 1, y: 0, x: 100 }}
-        transition={{ delay: 2.8, duration: 1 }}
+        transition={{ delay: 2.8, duration: 0.5 }}
         style={{
           position: "absolute",
           right: "40%",
