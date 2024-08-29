@@ -32,6 +32,8 @@ The project is developed using modern React, Typescript and Vite technologies. T
 
 - **SCSS:** A more powerful and feature-rich extension of CSS that enables better organization and maintainability of stylesheets.
 
+- **Framer Motion:** An animation library for React, used to easily add animations to the project. 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
